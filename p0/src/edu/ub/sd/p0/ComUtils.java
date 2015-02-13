@@ -168,7 +168,6 @@ public class ComUtils {
     public void writeTest() {
         try {
             write_string("Hola Oriol\n");
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }
