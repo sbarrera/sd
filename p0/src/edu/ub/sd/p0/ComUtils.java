@@ -56,22 +56,28 @@ public class ComUtils {
 
     /* Escriure un string */
     public void write_string(String str) throws IOException {
+        //definir variabls numbytes y lenStr
         int numBytes, lenStr;
+        // inicializamos un array de tamaño STRSIZE = 40
         byte bStr[] = new byte[STRSIZE];
-
+        //miramos el tamaño de STR que viene pasado por paramtro y se lo assignamos a lenStr
         lenStr = str.length();
-
-        if (lenStr > STRSIZE)
+        // si LenSTR es mayor k STRSIZE (40)
+        if (lenStr > STRSIZE) {
+            //assginamos STRSIZE A numBytes
             numBytes = STRSIZE;
-        else
+        }
+        else{
+            //Sino se le asigna lenStr
             numBytes = lenStr;
-
+        }
+        //Para cada caracter que tiene str lo asginamos a la posicion i del array
         for (int i = 0; i < numBytes; i++)
             bStr[i] = (byte) str.charAt(i);
-
+        // rellenamos desde numBytes y hasta STRSIZE (40) la array con espacios en blanco
         for (int i = numBytes; i < STRSIZE; i++)
             bStr[i] = (byte) ' ';
-
+        //escribe STRSIZE bytes del array bstr al outputstream
         dos.write(bStr, 0, STRSIZE);
     }
 
