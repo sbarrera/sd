@@ -6,6 +6,20 @@ import java.util.Locale;
 
 
 public class ComUtils {
+    public static enum Endianness {
+
+        BIG, LITTLE;
+
+        public static boolean isBigEndian(Endianness endianness) {
+            return endianness == Endianness.BIG;
+        }
+
+        public static boolean isLittleEndian(Endianness endianness) {
+            return endianness == Endianness.LITTLE;
+        }
+
+    }
+
     /* Mida d'una cadena de caracters */
     private final int STRSIZE = 40;
     /* Objectes per escriure i llegir dades */
@@ -27,14 +41,14 @@ public class ComUtils {
         byte bytes[] = new byte[4];
         bytes = read_bytes(4);
 
-        return bytesToInt32(bytes, "be");
+        return bytesToInt32(bytes, Endianness.BIG);
     }
 
     /* Escriure un enter de 32 bits */
     public void write_int32(int number) throws IOException {
         byte bytes[] = new byte[4];
 
-        int32ToBytes(number, bytes, "be");
+        int32ToBytes(number, bytes, Endianness.BIG);
         dos.write(bytes, 0, 4);
     }
 
@@ -82,8 +96,8 @@ public class ComUtils {
     }
 
     /* Passar d'enters a bytes */
-    private int int32ToBytes(int number, byte bytes[], String endianess) {
-        if ("be".equals(endianess.toLowerCase())) {
+    private int int32ToBytes(int number, byte bytes[], Endianness endianness) {
+        if ( Endianness.isBigEndian(endianness) ) {
             bytes[0] = (byte) ((number >> 24) & 0xFF);
             bytes[1] = (byte) ((number >> 16) & 0xFF);
             bytes[2] = (byte) ((number >> 8) & 0xFF);
@@ -98,10 +112,10 @@ public class ComUtils {
     }
 
     /* Passar de bytes a enters */
-    private int bytesToInt32(byte bytes[], String endianess) {
+    private int bytesToInt32(byte bytes[], Endianness endianness) {
         int number;
 
-        if ("be".equals(endianess.toLowerCase())) {
+        if ( Endianness.isBigEndian(endianness) ) {
             number = ((bytes[0] & 0xFF) << 24) | ((bytes[1] & 0xFF) << 16) |
                     ((bytes[2] & 0xFF) << 8) | (bytes[3] & 0xFF);
         } else {
@@ -171,18 +185,18 @@ public class ComUtils {
         dos.writeBytes(str);
     }
 
-    public void writeTest() {
+    public void writeTest(String str) {
         try {
-            write_string("Hola Oriol\n");
+            write_string_variable(str.length(), str);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-    public String readTest() {
+    public String readTest(String str) {
         String retorno = "";
         try {
-            retorno = read_string_variable(10);
+            retorno = read_string_variable(str.length());
         } catch (Exception exc) {
             exc.printStackTrace();
         }

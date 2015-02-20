@@ -12,8 +12,9 @@ public class Test {
         try {
             file.createNewFile();
             ComUtils cmUtils = new ComUtils(file);
-            cmUtils.writeTest();
-            System.out.println(cmUtils.readTest());
+            String str = "Hello World";
+            cmUtils.writeTest(str);
+            System.out.println(cmUtils.readTest(str));
         } catch (IOException e) {
             System.out.println("Error Found during Operation:" + e.getMessage());
             e.printStackTrace();
