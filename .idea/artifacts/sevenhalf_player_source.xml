@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="sevenhalf-player:source">
+    <output-path>$PROJECT_DIR$/out/artifacts/sevenhalf_player_source</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/sevenhalf-player/src" />
+      <element id="dir-copy" path="$PROJECT_DIR$/sevenhalf-protocol/src" />
+      <element id="file-copy" path="$PROJECT_DIR$/sevenhalf-player/src/Client.java" />
+    </root>
+  </artifact>
+</component>

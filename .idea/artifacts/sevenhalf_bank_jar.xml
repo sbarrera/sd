@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="sevenhalf-bank:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sevenhalf_bank_jar</output-path>
+    <root id="root">
+      <element id="archive" name="sevenhalf-bank.jar">
+        <element id="module-output" name="sevenhalf-bank" />
+        <element id="module-output" name="sevenhalf-protocol" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/sevenhalf-bank/src/deck.txt" />
+    </root>
+  </artifact>
+</component>

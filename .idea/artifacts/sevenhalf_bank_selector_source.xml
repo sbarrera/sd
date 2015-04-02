@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="sevenhalf-bank-selector:source">
+    <output-path>$PROJECT_DIR$/out/artifacts/sevenhalf_bank_selector_source</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/sevenhalf-protocol/src" />
+      <element id="dir-copy" path="$PROJECT_DIR$/sevenhalf-bank-selector/src" />
+      <element id="dir-copy" path="$PROJECT_DIR$/sevenhalf-bank/src" />
+      <element id="file-copy" path="$PROJECT_DIR$/sevenhalf-bank-selector/src/Server.java" />
+    </root>
+  </artifact>
+</component>

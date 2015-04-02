@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/p0/p0.iml" filepath="$PROJECT_DIR$/p0/p0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sevenhalf-bank/sevenhalf-bank.iml" filepath="$PROJECT_DIR$/sevenhalf-bank/sevenhalf-bank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sevenhalf-bank-selector/sevenhalf-bank-selector.iml" filepath="$PROJECT_DIR$/sevenhalf-bank-selector/sevenhalf-bank-selector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sevenhalf-player/sevenhalf-player.iml" filepath="$PROJECT_DIR$/sevenhalf-player/sevenhalf-player.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sevenhalf-protocol/sevenhalf-protocol.iml" filepath="$PROJECT_DIR$/sevenhalf-protocol/sevenhalf-protocol.iml" />
     </modules>
   </component>
 </project>

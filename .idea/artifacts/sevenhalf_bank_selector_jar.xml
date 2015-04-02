@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact name="sevenhalf-bank-selector:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sevenhalf_bank_selector_jar</output-path>
+    <root id="root">
+      <element id="archive" name="sevenhalf-bank-selector.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/sevenhalf-bank-selector/src/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="sevenhalf-bank" />
+        <element id="module-output" name="sevenhalf-bank-selector" />
+        <element id="module-output" name="sevenhalf-protocol" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/sevenhalf-bank/src/deck.txt" />
+    </root>
+  </artifact>
+</component>

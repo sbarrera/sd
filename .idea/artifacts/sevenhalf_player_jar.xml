@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sevenhalf-player:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sevenhalf_player_jar</output-path>
+    <root id="archive" name="sevenhalf-player.jar">
+      <element id="module-output" name="sevenhalf-protocol" />
+      <element id="module-output" name="sevenhalf-player" />
+    </root>
+  </artifact>
+</component>
