@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/sevenhalf-bank-selector/sevenhalf-bank-selector.iml" filepath="$PROJECT_DIR$/sevenhalf-bank-selector/sevenhalf-bank-selector.iml" />
       <module fileurl="file://$PROJECT_DIR$/sevenhalf-player/sevenhalf-player.iml" filepath="$PROJECT_DIR$/sevenhalf-player/sevenhalf-player.iml" />
       <module fileurl="file://$PROJECT_DIR$/sevenhalf-protocol/sevenhalf-protocol.iml" filepath="$PROJECT_DIR$/sevenhalf-protocol/sevenhalf-protocol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat-helloworld/tomcat-helloworld.iml" filepath="$PROJECT_DIR$/tomcat-helloworld/tomcat-helloworld.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet-mapping>
+        <servlet-name>Counter</servlet-name>
+        <url-pattern>/Counter</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Counter</servlet-name>
+        <servlet-class>edu.ub.sd.tomcat.helloworld.Counter</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GuessNumber</servlet-name>
+        <url-pattern>/GuessNumber</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GuessNumber</servlet-name>
+        <servlet-class>edu.ub.sd.tomcat.helloworld.GuessNumber</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PostRedirectGet</servlet-name>
+        <url-pattern>/PostRedirectGet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>PostRedirectGet</servlet-name>
+        <servlet-class>edu.ub.sd.tomcat.helloworld.PostRedirectGet</servlet-class>
+    </servlet>
+
+</web-app>
