@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="online-resource-lib:source">
+    <output-path>$PROJECT_DIR$/out/artifacts/online_resource_lib_source</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/online-resource-lib" />
+      <element id="dir-copy" path="$PROJECT_DIR$/online-resource-lib-common" />
+    </root>
+  </artifact>
+</component>

@@ -14,6 +14,17 @@ public class PostRedirectGet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String contextPath = request.getContextPath();
+        String requestUri = request.getRequestURI();
+        String processedUri = requestUri.replace(contextPath, "");
+        String requestUrl = request.getRequestURL().toString();
+        String servletPath = request.getServletPath();
+
+        boolean forwardingJsp = false;
+
+        log(String.format("method [%s] contextPath [%s] requestUri [%s] processedUri [%s] requestUrl [%s]", "GET", contextPath, requestUri, processedUri, requestUrl));
+        log(String.format("forwardingJsp [%s] servletPath [%s]", forwardingJsp, servletPath));
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/postRedirectGet.jsp");
         dispatcher.forward(request, response);
     }
@@ -21,6 +32,17 @@ public class PostRedirectGet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean doHardWay = false;
+
+        String contextPath = request.getContextPath();
+        String requestUri = request.getRequestURI();
+        String processedUri = requestUri.replace(contextPath, "");
+        String requestUrl = request.getRequestURL().toString();
+        String servletPath = request.getServletPath();
+
+        boolean forwardingJsp = false;
+
+        log(String.format("method [%s] contextPath [%s] requestUri [%s] processedUri [%s] requestUrl [%s]", "POST", contextPath, requestUri, processedUri, requestUrl));
+        log(String.format("forwardingJsp [%s] servletPath [%s]", forwardingJsp, servletPath));
 
         if ( doHardWay ) {
             String redirectedUrl = getAbsolutePathUrl(request, "404.jsp");

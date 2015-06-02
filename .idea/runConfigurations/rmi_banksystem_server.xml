@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="rmi-banksystem-server" type="JarApplication" factoryName="JAR Application">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/rmi_banksystem_server_jar/rmi-banksystem-server.jar" />
+    <option name="WORKING_DIRECTORY" value="./out/artifacts/rmi_banksystem_server_jar" />
+    <envs />
+    <method>
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="rmi-banksystem-server:jar" />
+      </option>
+    </method>
+  </configuration>
+</component>

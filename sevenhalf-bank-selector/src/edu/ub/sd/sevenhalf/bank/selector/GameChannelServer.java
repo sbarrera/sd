@@ -93,26 +93,51 @@ public class GameChannelServer extends GameServer {
             throw new EndOfStreamException("Received END-OF-STREAM");
         }
 
+        //if ( readBytes == 0 ) {
+        //    throw new NotEnoughBytesException();
+        //}
+
         byteCount += readBytes;
+
+//        System.out.println(String.format("readBytes [%s] byteCount [%s] numBytes [%s] remaining [%s]", readBytes, byteCount, numBytes, inBuffer.remaining()));
+        System.out.println(String.format("readBytes [%s] byteCount [%s] numBytes [%s]", readBytes, byteCount, numBytes));
 
         if ( byteCount >= numBytes ) {
             data = new byte[numBytes];
+//            System.out.println(String.format("before flip numBytes [%s] position [%s] remaining [%s]", numBytes, inBuffer.position(), inBuffer.remaining()));
             inBuffer.flip();
+//            System.out.println(String.format("after flip numBytes [%s] position [%s] remaining [%s]", numBytes, inBuffer.position(), inBuffer.remaining()));
             inBuffer.get(data, 0, numBytes);
+//            System.out.println(String.format("after get numBytes [%s] position [%s] remaining [%s]", numBytes, inBuffer.position(), inBuffer.remaining()));
 
             if ( inBuffer.remaining() > 0 ) {
+//                byte[] remaining = new byte[inBuffer.remaining()];
+//                System.out.println(
+//                        String.format("position [%s] remaining [%s] inBuffer.last [%s]",
+//                                inBuffer.position(),
+//                                inBuffer.remaining(),
+//                                inBuffer.position() + inBuffer.remaining()));
+//                inBuffer.duplicate().get(remaining, 0, inBuffer.remaining());
+//                System.out.println(String.format("remaining [%s]", ComUtils.bytesToHex(remaining)));
+//                System.out.println(String.format("second flip before numBytes [%s] position [%s] remaining [%s]", numBytes, inBuffer.position(), inBuffer.remaining()));
                 System.out.println("Compacting buffer...");
                 inBuffer.compact();
                 doProcess = true;
+                //inBuffer.flip();
+//                System.out.println(String.format("second flip after numBytes [%s] position [%s] remaining [%s]", numBytes, inBuffer.position(), inBuffer.remaining()));
             } else {
                 System.out.println("Clearing buffer...");
                 doProcess = false;
                 inBuffer.clear();
             }
+
+//            System.out.println(String.format("end numBytes [%s] position [%s] remaining [%s]", numBytes, inBuffer.position(), inBuffer.remaining()));
             byteCount -= numBytes;
         } else {
             throw new NotEnoughBytesException();
         }
+
+        System.out.println(String.format("data [%s]", ComUtils.bytesToHex(data)));
 
         return data;
     }
@@ -139,7 +164,6 @@ public class GameChannelServer extends GameServer {
         return super.expectCommandHeaders(syntacticNames);
     }
 
-    @Override
     protected String expectCommandHeader(String syntacticName) throws Exception {
         if ( lastCommandHeader != null ) {
             System.out.println(String.format("[%s] lastCommandHeader [%s]", "expectCommandHeader", lastCommandHeader));
@@ -149,7 +173,6 @@ public class GameChannelServer extends GameServer {
         return super.expectCommandHeader(syntacticName);
     }
 
-    @Override
     protected void initializeLog() throws Exception {
         logFilename = String.format("ServerGame-%s.log", id);
         logPath = Paths.get("./" + logFilename);

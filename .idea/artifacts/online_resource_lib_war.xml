@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="online-resource-lib:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/online_resource_lib_war</output-path>
+    <root id="archive" name="online-resource-lib_war.war">
+      <element id="artifact" artifact-name="online-resource-lib:war exploded" />
+    </root>
+  </artifact>
+</component>

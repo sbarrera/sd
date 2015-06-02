@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="online-resource-lib:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/online_resource_lib_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="online-resource-lib" />
+          <element id="module-output" name="online-resource-lib-common" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="dir-copy" path="$PROJECT_DIR$/lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="online-resource-lib/web/Web" />
+      <element id="javaee-facet-resources" facet="online-resource-lib-common/web/Web" />
+    </root>
+  </artifact>
+</component>

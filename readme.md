@@ -1,7 +1,5 @@
 # Software Distribuit (2015) - Grup F11
 
----
-
 ## Set i Mig
 
 Quan es generen els artefactes del projecte, aquests es guardan a la carpeta `out\artifacts` de l'arrel

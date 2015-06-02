@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/online-resource-lib/online-resource-lib.iml" filepath="$PROJECT_DIR$/online-resource-lib/online-resource-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/online-resource-lib-common/online-resource-lib-common.iml" filepath="$PROJECT_DIR$/online-resource-lib-common/online-resource-lib-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/p0/p0.iml" filepath="$PROJECT_DIR$/p0/p0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rmi-banksystem-client/rmi-banksystem-client.iml" filepath="$PROJECT_DIR$/rmi-banksystem-client/rmi-banksystem-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rmi-banksystem-common/rmi-banksystem-common.iml" filepath="$PROJECT_DIR$/rmi-banksystem-common/rmi-banksystem-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rmi-banksystem-server/rmi-banksystem-server.iml" filepath="$PROJECT_DIR$/rmi-banksystem-server/rmi-banksystem-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/sevenhalf-bank/sevenhalf-bank.iml" filepath="$PROJECT_DIR$/sevenhalf-bank/sevenhalf-bank.iml" />
       <module fileurl="file://$PROJECT_DIR$/sevenhalf-bank-selector/sevenhalf-bank-selector.iml" filepath="$PROJECT_DIR$/sevenhalf-bank-selector/sevenhalf-bank-selector.iml" />
       <module fileurl="file://$PROJECT_DIR$/sevenhalf-player/sevenhalf-player.iml" filepath="$PROJECT_DIR$/sevenhalf-player/sevenhalf-player.iml" />
       <module fileurl="file://$PROJECT_DIR$/sevenhalf-protocol/sevenhalf-protocol.iml" filepath="$PROJECT_DIR$/sevenhalf-protocol/sevenhalf-protocol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat-auth-example/tomcat-auth-example.iml" filepath="$PROJECT_DIR$/tomcat-auth-example/tomcat-auth-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/tomcat-helloworld/tomcat-helloworld.iml" filepath="$PROJECT_DIR$/tomcat-helloworld/tomcat-helloworld.iml" />
     </modules>
   </component>

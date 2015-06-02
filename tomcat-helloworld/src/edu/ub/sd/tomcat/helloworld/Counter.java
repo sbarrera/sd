@@ -34,6 +34,7 @@ public class Counter extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println(String.format("<h1>Count amount: %s</h1>", currentCount));
+        out.println("</body>");
         out.println("</html>");
     }
 

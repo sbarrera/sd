@@ -35,8 +35,10 @@ public class GuessNumber extends HttpServlet {
         request.setAttribute(REQUEST_ATTR_WRONGGUESS, Boolean.FALSE);
         request.setAttribute(REQUEST_ATTR_NUMBER, sessionNumber);
 
-        if ( requestNumber != null ) {
-            if ( requestNumber.equals(sessionNumber) ) {
+        boolean hasSentNumber = requestNumber != null;
+        if ( hasSentNumber ) {
+            boolean hasGuessedRight = requestNumber.equals(sessionNumber);
+            if ( hasGuessedRight ) {
                 request.setAttribute(REQUEST_ATTR_WIN, Boolean.TRUE);
 
                 sessionNumber = regenerateSessionNumber(request.getSession());
